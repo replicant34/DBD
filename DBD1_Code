@@ -1,0 +1,109 @@
+CREATE TABLE `Orders` (
+    `row_id` int  NOT NULL ,
+    `order_id` varchar(10)  NOT NULL ,
+    `created_at` datetime  NOT NULL ,
+    `item_id` int  NOT NULL ,
+    `quantity` int  NOT NULL ,
+    `customer_id` int  NOT NULL ,
+    `customer_firstname` varchar(50)  NOT NULL ,
+    `customer_lastname` varchar(50)  NOT NULL ,
+    `delivery` boolean  NOT NULL ,
+    `add_id` int  NOT NULL ,
+    PRIMARY KEY (
+        `row_id`
+    )
+);
+
+CREATE TABLE `Customers` (
+    `customer_id` int  NOT NULL ,
+    `customer_firstname` varchar(50)  NOT NULL ,
+    `customer_lastname` varchar(50)  NOT NULL ,
+    PRIMARY KEY (
+        `customer_id`
+    )
+);
+
+CREATE TABLE `Address` (
+    `add_id` int  NOT NULL ,
+    `delivery_address1` varchar(200)  NOT NULL ,
+    `delivery_address2` varchar(200)  NULL ,
+    `delivery_county` varchar(50)  NOT NULL ,
+    `delivery_eircode` varchar(20)  NOT NULL ,
+    PRIMARY KEY (
+        `add_id`
+    )
+);
+
+CREATE TABLE `Item` (
+    `item_id` int  NOT NULL ,
+    `sku` varchar(20)  NOT NULL ,
+    `item_name` varchar(100)  NOT NULL ,
+    `item_cat` varchar(100)  NOT NULL ,
+    `item_size` varchar(10)  NOT NULL ,
+    `item_ varchar(20) price` decimal(10,2)  NOT NULL ,
+    PRIMARY KEY (
+        `item_id`
+    )
+);
+
+CREATE TABLE `Composition` (
+    `row_id` int  NOT NULL ,
+    `Composition_id` varchar(20)  NOT NULL ,
+    `comp_id` varchar(10)  NOT NULL ,
+    `quantity` int  NOT NULL ,
+    PRIMARY KEY (
+        `row_id`
+    )
+);
+
+CREATE TABLE `Components` (
+    `comp_id` varchar(10)  NOT NULL ,
+    `comp_name` varchar(200)  NOT NULL ,
+    `comp_weight` int  NOT NULL ,
+    `comp_mass` varchar(20)  NOT NULL ,
+    `comp_price` decimal(5,2)  NOT NULL ,
+    PRIMARY KEY (
+        `comp_id`
+    )
+);
+
+CREATE TABLE `Inventory` (
+    `inv_id` int  NOT NULL ,
+    `item_id` varchar(10)  NOT NULL ,
+    `quantity` int  NOT NULL ,
+    PRIMARY KEY (
+        `inv_id`
+    )
+);
+
+CREATE TABLE `roster` (
+    `row_id` int  NOT NULL ,
+    `roster_id` varchar(20)  NOT NULL ,
+    `date` datetime  NOT NULL ,
+    `shift_id` varchar(20)  NOT NULL ,
+    `staff_id` vatchar(20)  NOT NULL ,
+    PRIMARY KEY (
+        `row_id`
+    )
+);
+
+CREATE TABLE `Staff` (
+    `staff_id` varchar(20)  NOT NULL ,
+    `first_name` varchar(50)  NOT NULL ,
+    `last_name` varchar(50)  NOT NULL ,
+    `position` varchar(100)  NOT NULL ,
+    `hourly_rate` decimal(5,2)  NOT NULL ,
+    PRIMARY KEY (
+        `staff_id`
+    )
+);
+
+CREATE TABLE `Shift` (
+    `shift_id` varchar(20)  NOT NULL ,
+    `day_of_week` varchar(10)  NOT NULL ,
+    `start_time` time  NOT NULL ,
+    `end_time` time  NOT NULL ,
+    PRIMARY KEY (
+        `shift_id`
+    )
+);
