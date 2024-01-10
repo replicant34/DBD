@@ -1,0 +1,364 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {}
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+
+body#loginBody{
+    background: url('../css/loginpage.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.loginHeader{
+    text-align: center;
+}
+div.loginHeader{
+    margin-bottom: 30px;
+}
+div.loginHeader h1{
+    font-size: 50px;
+    font-weight: bold;
+    color:rgb(20, 49, 103);
+    padding:0px;
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.loginHeader p{
+    color:rgb(23, 57, 118);
+    font-size: 20px;
+    margin: 0px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.loginHeader p:after{
+    content:'';
+    display: block;
+    height: 3px;
+    background: rgb(79, 19, 83);
+    margin:0 auto;
+}
+div.loginBody form{
+    margin:0 auto;
+    width: 450px;
+    background: rgba(0,0,0,.5);
+    padding: 50px;
+    border: 2px solid floralwhite;
+    border-radius: 8px;
+}
+div.loginInputContainer{
+    margin-top: 20px;
+}
+div.loginInputContainer label{
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+div.loginInputContainer input{
+    height: 30px;
+    width: 90%;
+    border: 2px solid rgb(162, 156, 182);
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+
+}
+div.loginButtonContainer{
+    margin-top: 40px;
+    text-align: center;
+}
+div.loginButtonContainer button{
+    font-size: 20px;
+    padding: 10px 20px;
+    background: rgb(146, 162, 232);
+    border: none;
+    color: #ffffff;
+}
+
+div.header {
+    width: 100%;
+    height: 5px;
+    background: #aa2e2e;
+}
+div.banner{
+    background: url('../css/homepage.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+div.homepageContainer{
+    width: 100%;
+    max-width: 1000px;
+    /*height: 70vh;*/
+    margin: 0 auto;
+}
+div.bannerHeader h1{
+    font-size: 30px;
+    color:rgb(10, 8, 8);
+    line-height: 100%;
+}
+div.bannerHeader p{
+    font-size: 30px;
+    color:rgb(11, 6, 6);
+    text-transform: uppercase;
+    line-height: 100%;
+
+}
+p.bannerTagline{
+    margin: 20px;
+    font-size: 20px;
+    color: black;
+}
+div.BannerIcons{
+    margin-top: 50px;
+}
+div.BannerIcons a{
+    font-size: 25px;
+    margin-left: 40px;
+    padding: 7px 15px;
+    background: rgba(0,0,0,.5);
+    color: #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+div.BannerIcons a:first-child{
+    margin-left: 0px;
+}
+div.BannerIcons a:hover{
+    color: #ffffff;
+    font-size: 25px;
+    background: pink;
+    transition: 5s all;
+}
+div.homepageFeatures{
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0px;
+}
+div.homepageFeature{
+    padding: 10px 20px;
+    text-align: center;
+    width: 33%;
+}
+div.homepageFeature:hover{
+    border-top: 2px solid pink;
+    border-bottom: 2px solid pink;
+    transition: 0.5s all;
+}
+div.homepageFeature span.featureIcon{
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    font-size: 50px;
+    background: pink;
+    color: #ffffff;
+    padding-left: 0px;
+    padding-top: 5px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+div.homepageFeature h3.featureTitle{
+    margin-bottom: 20px;
+}
+div.homepageFeature p.featureDescription{
+    color: black;
+}
+div.homepageNotified{
+    background: rgb(192, 192, 192);
+    padding: 50px 0px;
+}
+div.homepageNotifiedContainer{
+    display: flex;
+    flex-direction: row;
+}
+div.homepageNotifiedContainer > div{
+    width: 50%;
+}
+div.emailform{
+    width: 40%;
+    text-align: center;
+}
+div.video{
+    width: 60%;
+    margin: 0 auto;
+}
+div.homepageNotified h3{
+    margin-bottom: 20px;
+}
+div.homepageNotified p3{
+    color: rgb(37, 37, 37);
+    line-height: 150%;
+    margin-bottom: 30px;
+}
+div.formContainer{
+    width: 80%;
+    position: relative;
+    border-radius: 10px;
+}
+div.formContainer input{
+    width: 100%;
+    padding: 15px 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+div.formContainer input{
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 15px;
+    border: none;
+}
+div.formContainer input:focus{
+    outline: none;
+}
+iframe{
+    width: 80%;
+    height: 120%;
+    margin: 0 auto;
+}
+div.formContainer button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 20px;
+    padding: 27px 20px;
+    background: #823f50;
+    border: none;
+    color: #120b0b;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+iframe{
+    width: 80%;
+    height: 120%;
+}
+
+div.social{
+    text-align: center;
+    padding: 70px 0 30px 0px;
+}
+div.socialHeader{
+    font-size: 30px;
+}
+p.socialText{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #848484;
+    font-size: 20px;
+
+}
+div.socialIconsContainer a{
+    font-size: 23px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    padding-top: 7px;
+    background: gray;
+    border-radius: 50%;
+    color: #fff;
+    margin-left: 20px;
+}
+div.socialIconsContainer a:hover{
+    background: #b94e69;
+    transition: 0.3s all;
+}
+div.footer{
+    background: #b6b4b4;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+div.footer a{
+    color: #848484;
+    margin-left: 30px;
+    text-decoration: none;
+}
